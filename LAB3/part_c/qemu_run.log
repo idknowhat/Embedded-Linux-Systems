@@ -1,0 +1,8 @@
+=== Buggy App v1.0 - LAB-03 Debug Target ===
+[TEST1] Processing array of 5 elements
+Sum = 1737599894
+[TEST2] Creating message
+Message: u
+[TEST3] Integer calculation
+calculate(100000, 100000) = 1410065408
+Done.

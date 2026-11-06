@@ -1,0 +1,40 @@
+execve("./trace_app", ["./trace_app"], 0x7ffc8063d8d0 /* 55 vars */) = 0
+brk(NULL)                               = 0x6276d4b85000
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x77ad1bd75000
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=74611, ...}) = 0
+mmap(NULL, 74611, PROT_READ, MAP_PRIVATE, 3, 0) = 0x77ad1bd62000
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0 \250\2\0\0\0\0\0"..., 832) = 832
+pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 840, 64) = 840
+fstat(3, {st_mode=S_IFREG|0755, st_size=2190608, ...}) = 0
+pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 840, 64) = 840
+mmap(NULL, 2231696, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x77ad1ba00000
+mmap(0x77ad1ba28000, 1671168, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x28000) = 0x77ad1ba28000
+mmap(0x77ad1bbc0000, 319488, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1c0000) = 0x77ad1bbc0000
+mmap(0x77ad1bc0e000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x20e000) = 0x77ad1bc0e000
+mmap(0x77ad1bc14000, 52624, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x77ad1bc14000
+close(3)                                = 0
+mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x77ad1bd5f000
+arch_prctl(ARCH_SET_FS, 0x77ad1bd5f740) = 0
+set_tid_address(0x77ad1bd5fd68)         = 75835
+set_robust_list(0x77ad1bd5fa20, 24)     = 0
+rseq(0x77ad1bd5f680, 0x21, 0, 0x53053053) = 0
+mprotect(0x77ad1bc0e000, 16384, PROT_READ) = 0
+mprotect(0x6276b5d4c000, 4096, PROT_READ) = 0
+mprotect(0x77ad1bdba000, 8192, PROT_READ) = 0
+prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+getrandom("\xfe\x55\xd4\x33\x32\x4f\x79\x79", 8, GRND_NONBLOCK) = 8
+munmap(0x77ad1bd62000, 74611)           = 0
+fstat(1, {st_mode=S_IFCHR|0600, st_rdev=makedev(0x88, 0), ...}) = 0
+brk(NULL)                               = 0x6276d4b85000
+brk(0x6276d4ba6000)                     = 0x6276d4ba6000
+write(1, "=== System Call Tracing Test ==="..., 33) = 33
+openat(AT_FDCWD, "test.txt", O_WRONLY|O_CREAT|O_TRUNC, 0644) = 3
+write(3, "Hello Embedded Linux!\n", 22) = 22
+close(3)                                = 0
+write(1, "File written successfully!\n", 27) = 27
+exit_group(0)                           = ?
++++ exited with 0 +++
