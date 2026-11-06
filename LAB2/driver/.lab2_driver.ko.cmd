@@ -1,0 +1,1 @@
+cmd_/home/vuong/embedded_lab2/driver/lab2_driver.ko := arm-linux-gnueabihf-ld -r -EL --build-id=sha1  -T scripts/module.lds -o /home/vuong/embedded_lab2/driver/lab2_driver.ko /home/vuong/embedded_lab2/driver/lab2_driver.o /home/vuong/embedded_lab2/driver/lab2_driver.mod.o;  true
