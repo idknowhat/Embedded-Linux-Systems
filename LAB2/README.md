@@ -1,14 +1,23 @@
-# LAB 2 - Embedded Linux Device Driver
-
-## Overview
-Embedded Linux device driver implementation.
+# Embedded Linux - LAB2
 
 ## Contents
-- driver/: LAB2 driver source code, Makefile and compiled module.
-- backup_C3/: Backup files from LAB2 development.
+- driver/: Character device driver source, Makefile and kernel module.
+- initramfs/: LAB2 initramfs image.
+- rootfs_config/: BusyBox init configuration.
 
-## Build
-Enter the driver directory and use its Makefile to build the kernel module.
+## Driver features
+- Character device registration.
+- Read and write operations.
+- Mutex protection.
+- Sysfs attributes.
+- Procfs information at /proc/lab2_info.
+- Module initialization and cleanup.
 
-## Note
-Assignment02 is maintained separately and is not included in this folder.
+## Boot configuration
+- /etc/inittab executes /etc/init.d/rcS.
+- rcS loads lab2_driver.ko using insmod.
+- Device node: /dev/lab2
+
+## Archive validation
+The initramfs archive was checked using gzip and cpio.
+The archive contains lab2_driver.ko, BusyBox, init, inittab and rcS.

@@ -1,0 +1,15 @@
+#!/bin/sh
+
+mount -t proc none /proc
+mount -t sysfs none /sys
+mount -t tmpfs none /tmp
+
+echo 'Boot completed! Welcome to Embedded Linux Lab 2'
+
+hostname embedded-lab
+
+echo '[ LAB-02 ] Loading lab2_driver...'
+insmod /lib/modules/5.15.0/lab2_driver.ko
+echo '[ LAB-02 ] Creating device node...'
+mknod /dev/lab2 c 240 0
+echo '[ LAB-02 ] Driver loading finished.'
