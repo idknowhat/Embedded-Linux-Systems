@@ -1,0 +1,856 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 33  of event 'task-clock:ppp'
+# Event count (approx.): 8250000
+#
+# Children      Self  Command       Shared Object     Symbol                         
+# ........  ........  ............  ................  ...............................
+#
+    84.85%     0.00%  sms_app_host  sms_app_host      [.] alert_thread
+            |
+            ---alert_thread
+               |          
+               |--78.79%--usleep
+               |          |          
+               |           --72.73%--__nanosleep
+               |                     |          
+               |                      --69.70%--clock_nanosleep@GLIBC_2.2.5
+               |                                |          
+               |                                |--66.67%--__syscall_cancel_arch_end
+               |                                |          0xffffffffa9e0012b
+               |                                |          0xffffffffab531b85
+               |                                |          0xffffffffaa149e95
+               |                                |          0xffffffffaa3884ee
+               |                                |          0xffffffffaa385c24
+               |                                |          |          
+               |                                |          |--63.64%--0xffffffffaa379aab
+               |                                |          |          0xffffffffab549cee
+               |                                |          |          |          
+               |                                |          |          |--60.61%--0xffffffffab541f87
+               |                                |          |          |          0xffffffffab541bb6
+               |                                |          |          |          0xffffffffaa2a086b
+               |                                |          |          |          
+               |                                |          |           --3.03%--0xffffffffab541fe5
+               |                                |          |          
+               |                                |           --3.03%--0xffffffffaa379a62
+               |                                |                     0xffffffffaa377fca
+               |                                |                     0xffffffffaa377e7e
+               |                                |          
+               |                                 --3.03%--__internal_syscall_cancel
+               |          
+                --6.06%--mq_timedreceive@@GLIBC_2.34
+                          __syscall_cancel_arch_end
+                          0xffffffffa9e0012b
+                          |          
+                          |--3.03%--0xffffffffab531b85
+                          |          0xffffffffaa148ffe
+                          |          0xffffffffaa909718
+                          |          0xffffffffaa90916f
+                          |          
+                           --3.03%--0xffffffffab531ad0
+
+    84.85%     0.00%  sms_app_host  [unknown]         [.] 0xffffffffa9e0012b
+            |
+            ---0xffffffffa9e0012b
+               |          
+               |--81.82%--0xffffffffab531b85
+               |          |          
+               |          |--66.67%--0xffffffffaa149e95
+               |          |          0xffffffffaa3884ee
+               |          |          0xffffffffaa385c24
+               |          |          |          
+               |          |          |--63.64%--0xffffffffaa379aab
+               |          |          |          0xffffffffab549cee
+               |          |          |          |          
+               |          |          |          |--60.61%--0xffffffffab541f87
+               |          |          |          |          0xffffffffab541bb6
+               |          |          |          |          0xffffffffaa2a086b
+               |          |          |          |          
+               |          |          |           --3.03%--0xffffffffab541fe5
+               |          |          |          
+               |          |           --3.03%--0xffffffffaa379a62
+               |          |                     0xffffffffaa377fca
+               |          |                     0xffffffffaa377e7e
+               |          |          
+               |          |--12.12%--0xffffffffaa1498b9
+               |          |          0xffffffffaa245386
+               |          |          0xffffffffaa245317
+               |          |          |          
+               |          |          |--9.09%--0xffffffffaa244bb6
+               |          |          |          0xffffffffaa243bc5
+               |          |          |          0xffffffffaa57591c
+               |          |          |          0xffffffffaa56d7ba
+               |          |          |          0xffffffffaa56d54c
+               |          |          |          |          
+               |          |          |          |--6.06%--0xffffffffaa56d22a
+               |          |          |          |          0xffffffffaa568127
+               |          |          |          |          0xffffffffab53c543
+               |          |          |          |          
+               |          |          |           --3.03%--0xffffffffab54c4d0
+               |          |          |          
+               |          |           --3.03%--0xffffffffaa244c15
+               |          |                     0xffffffffaa2abc67
+               |          |                     0xffffffffab54c591
+               |          |          
+               |           --3.03%--0xffffffffaa148ffe
+               |                     0xffffffffaa909718
+               |                     0xffffffffaa90916f
+               |          
+                --3.03%--0xffffffffab531ad0
+
+    81.82%     6.06%  sms_app_host  libc.so.6         [.] usleep
+            |          
+            |--75.76%--usleep
+            |          __nanosleep
+            |          |          
+            |           --72.73%--clock_nanosleep@GLIBC_2.2.5
+            |                     |          
+            |                     |--69.70%--__syscall_cancel_arch_end
+            |                     |          |          
+            |                     |           --66.67%--0xffffffffa9e0012b
+            |                     |                     0xffffffffab531b85
+            |                     |                     0xffffffffaa149e95
+            |                     |                     0xffffffffaa3884ee
+            |                     |                     0xffffffffaa385c24
+            |                     |                     |          
+            |                     |                     |--63.64%--0xffffffffaa379aab
+            |                     |                     |          0xffffffffab549cee
+            |                     |                     |          |          
+            |                     |                     |          |--60.61%--0xffffffffab541f87
+            |                     |                     |          |          0xffffffffab541bb6
+            |                     |                     |          |          0xffffffffaa2a086b
+            |                     |                     |          |          
+            |                     |                     |           --3.03%--0xffffffffab541fe5
+            |                     |                     |          
+            |                     |                      --3.03%--0xffffffffaa379a62
+            |                     |                                0xffffffffaa377fca
+            |                     |                                0xffffffffaa377e7e
+            |                     |          
+            |                      --3.03%--__internal_syscall_cancel
+            |          
+             --6.06%--alert_thread
+                       usleep
+
+    81.82%     0.00%  sms_app_host  [unknown]         [.] 0xffffffffab531b85
+            |
+            ---0xffffffffab531b85
+               |          
+               |--66.67%--0xffffffffaa149e95
+               |          0xffffffffaa3884ee
+               |          0xffffffffaa385c24
+               |          |          
+               |          |--63.64%--0xffffffffaa379aab
+               |          |          0xffffffffab549cee
+               |          |          |          
+               |          |          |--60.61%--0xffffffffab541f87
+               |          |          |          0xffffffffab541bb6
+               |          |          |          0xffffffffaa2a086b
+               |          |          |          
+               |          |           --3.03%--0xffffffffab541fe5
+               |          |          
+               |           --3.03%--0xffffffffaa379a62
+               |                     0xffffffffaa377fca
+               |                     0xffffffffaa377e7e
+               |          
+               |--12.12%--0xffffffffaa1498b9
+               |          0xffffffffaa245386
+               |          0xffffffffaa245317
+               |          |          
+               |          |--9.09%--0xffffffffaa244bb6
+               |          |          0xffffffffaa243bc5
+               |          |          0xffffffffaa57591c
+               |          |          0xffffffffaa56d7ba
+               |          |          0xffffffffaa56d54c
+               |          |          |          
+               |          |          |--6.06%--0xffffffffaa56d22a
+               |          |          |          0xffffffffaa568127
+               |          |          |          0xffffffffab53c543
+               |          |          |          
+               |          |           --3.03%--0xffffffffab54c4d0
+               |          |          
+               |           --3.03%--0xffffffffaa244c15
+               |                     0xffffffffaa2abc67
+               |                     0xffffffffab54c591
+               |          
+                --3.03%--0xffffffffaa148ffe
+                          0xffffffffaa909718
+                          0xffffffffaa90916f
+
+    75.76%     3.03%  sms_app_host  libc.so.6         [.] __nanosleep
+            |          
+            |--72.73%--__nanosleep
+            |          clock_nanosleep@GLIBC_2.2.5
+            |          |          
+            |          |--69.70%--__syscall_cancel_arch_end
+            |          |          |          
+            |          |           --66.67%--0xffffffffa9e0012b
+            |          |                     0xffffffffab531b85
+            |          |                     0xffffffffaa149e95
+            |          |                     0xffffffffaa3884ee
+            |          |                     0xffffffffaa385c24
+            |          |                     |          
+            |          |                     |--63.64%--0xffffffffaa379aab
+            |          |                     |          0xffffffffab549cee
+            |          |                     |          |          
+            |          |                     |          |--60.61%--0xffffffffab541f87
+            |          |                     |          |          0xffffffffab541bb6
+            |          |                     |          |          0xffffffffaa2a086b
+            |          |                     |          |          
+            |          |                     |           --3.03%--0xffffffffab541fe5
+            |          |                     |          
+            |          |                      --3.03%--0xffffffffaa379a62
+            |          |                                0xffffffffaa377fca
+            |          |                                0xffffffffaa377e7e
+            |          |          
+            |           --3.03%--__internal_syscall_cancel
+            |          
+             --3.03%--alert_thread
+                       usleep
+                       __nanosleep
+
+    75.76%     3.03%  sms_app_host  libc.so.6         [.] __syscall_cancel_arch_end
+            |          
+            |--72.73%--__syscall_cancel_arch_end
+            |          0xffffffffa9e0012b
+            |          |          
+            |          |--69.70%--0xffffffffab531b85
+            |          |          |          
+            |          |          |--66.67%--0xffffffffaa149e95
+            |          |          |          0xffffffffaa3884ee
+            |          |          |          0xffffffffaa385c24
+            |          |          |          |          
+            |          |          |          |--63.64%--0xffffffffaa379aab
+            |          |          |          |          0xffffffffab549cee
+            |          |          |          |          |          
+            |          |          |          |          |--60.61%--0xffffffffab541f87
+            |          |          |          |          |          0xffffffffab541bb6
+            |          |          |          |          |          0xffffffffaa2a086b
+            |          |          |          |          |          
+            |          |          |          |           --3.03%--0xffffffffab541fe5
+            |          |          |          |          
+            |          |          |           --3.03%--0xffffffffaa379a62
+            |          |          |                     0xffffffffaa377fca
+            |          |          |                     0xffffffffaa377e7e
+            |          |          |          
+            |          |           --3.03%--0xffffffffaa148ffe
+            |          |                     0xffffffffaa909718
+            |          |                     0xffffffffaa90916f
+            |          |          
+            |           --3.03%--0xffffffffab531ad0
+            |          
+             --3.03%--logger_thread
+                       usleep
+                       __nanosleep
+                       clock_nanosleep@GLIBC_2.2.5
+                       __syscall_cancel_arch_end
+
+    72.73%     0.00%  sms_app_host  libc.so.6         [.] clock_nanosleep@GLIBC_2.2.5
+            |
+            ---clock_nanosleep@GLIBC_2.2.5
+               |          
+               |--69.70%--__syscall_cancel_arch_end
+               |          |          
+               |           --66.67%--0xffffffffa9e0012b
+               |                     0xffffffffab531b85
+               |                     0xffffffffaa149e95
+               |                     0xffffffffaa3884ee
+               |                     0xffffffffaa385c24
+               |                     |          
+               |                     |--63.64%--0xffffffffaa379aab
+               |                     |          0xffffffffab549cee
+               |                     |          |          
+               |                     |          |--60.61%--0xffffffffab541f87
+               |                     |          |          0xffffffffab541bb6
+               |                     |          |          0xffffffffaa2a086b
+               |                     |          |          
+               |                     |           --3.03%--0xffffffffab541fe5
+               |                     |          
+               |                      --3.03%--0xffffffffaa379a62
+               |                                0xffffffffaa377fca
+               |                                0xffffffffaa377e7e
+               |          
+                --3.03%--__internal_syscall_cancel
+
+    66.67%     0.00%  sms_app_host  [unknown]         [.] 0xffffffffaa149e95
+            |
+            ---0xffffffffaa149e95
+               0xffffffffaa3884ee
+               0xffffffffaa385c24
+               |          
+               |--63.64%--0xffffffffaa379aab
+               |          0xffffffffab549cee
+               |          |          
+               |          |--60.61%--0xffffffffab541f87
+               |          |          0xffffffffab541bb6
+               |          |          0xffffffffaa2a086b
+               |          |          
+               |           --3.03%--0xffffffffab541fe5
+               |          
+                --3.03%--0xffffffffaa379a62
+                          0xffffffffaa377fca
+                          0xffffffffaa377e7e
+
+    66.67%     0.00%  sms_app_host  [unknown]         [.] 0xffffffffaa3884ee
+            |
+            ---0xffffffffaa3884ee
+               0xffffffffaa385c24
+               |          
+               |--63.64%--0xffffffffaa379aab
+               |          0xffffffffab549cee
+               |          |          
+               |          |--60.61%--0xffffffffab541f87
+               |          |          0xffffffffab541bb6
+               |          |          0xffffffffaa2a086b
+               |          |          
+               |           --3.03%--0xffffffffab541fe5
+               |          
+                --3.03%--0xffffffffaa379a62
+                          0xffffffffaa377fca
+                          0xffffffffaa377e7e
+
+    66.67%     0.00%  sms_app_host  [unknown]         [.] 0xffffffffaa385c24
+            |
+            ---0xffffffffaa385c24
+               |          
+               |--63.64%--0xffffffffaa379aab
+               |          0xffffffffab549cee
+               |          |          
+               |          |--60.61%--0xffffffffab541f87
+               |          |          0xffffffffab541bb6
+               |          |          0xffffffffaa2a086b
+               |          |          
+               |           --3.03%--0xffffffffab541fe5
+               |          
+                --3.03%--0xffffffffaa379a62
+                          0xffffffffaa377fca
+                          0xffffffffaa377e7e
+
+    63.64%     0.00%  sms_app_host  [unknown]         [.] 0xffffffffaa379aab
+            |
+            ---0xffffffffaa379aab
+               0xffffffffab549cee
+               |          
+               |--60.61%--0xffffffffab541f87
+               |          0xffffffffab541bb6
+               |          0xffffffffaa2a086b
+               |          
+                --3.03%--0xffffffffab541fe5
+
+    63.64%     0.00%  sms_app_host  [unknown]         [.] 0xffffffffab549cee
+            |
+            ---0xffffffffab549cee
+               |          
+               |--60.61%--0xffffffffab541f87
+               |          0xffffffffab541bb6
+               |          0xffffffffaa2a086b
+               |          
+                --3.03%--0xffffffffab541fe5
+
+    60.61%    60.61%  sms_app_host  [unknown]         [k] 0xffffffffaa2a086b
+            |
+            ---alert_thread
+               usleep
+               __nanosleep
+               clock_nanosleep@GLIBC_2.2.5
+               __syscall_cancel_arch_end
+               0xffffffffa9e0012b
+               0xffffffffab531b85
+               0xffffffffaa149e95
+               0xffffffffaa3884ee
+               0xffffffffaa385c24
+               0xffffffffaa379aab
+               0xffffffffab549cee
+               0xffffffffab541f87
+               0xffffffffab541bb6
+               0xffffffffaa2a086b
+
+    60.61%     0.00%  sms_app_host  [unknown]         [.] 0xffffffffab541f87
+            |
+            ---0xffffffffab541f87
+               0xffffffffab541bb6
+               0xffffffffaa2a086b
+
+    60.61%     0.00%  sms_app_host  [unknown]         [.] 0xffffffffab541bb6
+            |
+            ---0xffffffffab541bb6
+               0xffffffffaa2a086b
+
+    12.12%     0.00%  sms_app_host  [unknown]         [k] 0x000000000000000a
+            |
+            ---0xa
+               main
+               pthread_create@GLIBC_2.2.5
+               internal_signal_restore_set (inlined)
+               create_thread
+               __GI___clone3
+               0xffffffffa9e0012b
+               0xffffffffab531b85
+               0xffffffffaa1498b9
+               0xffffffffaa245386
+               0xffffffffaa245317
+               |          
+               |--9.09%--0xffffffffaa244bb6
+               |          0xffffffffaa243bc5
+               |          0xffffffffaa57591c
+               |          0xffffffffaa56d7ba
+               |          0xffffffffaa56d54c
+               |          |          
+               |          |--6.06%--0xffffffffaa56d22a
+               |          |          0xffffffffaa568127
+               |          |          0xffffffffab53c543
+               |          |          
+               |           --3.03%--0xffffffffab54c4d0
+               |          
+                --3.03%--0xffffffffaa244c15
+                          0xffffffffaa2abc67
+                          0xffffffffab54c591
+
+    12.12%     0.00%  sms_app_host  sms_app_host      [.] main
+            |
+            ---main
+               pthread_create@GLIBC_2.2.5
+               internal_signal_restore_set (inlined)
+               create_thread
+               __GI___clone3
+               0xffffffffa9e0012b
+               0xffffffffab531b85
+               0xffffffffaa1498b9
+               0xffffffffaa245386
+               0xffffffffaa245317
+               |          
+               |--9.09%--0xffffffffaa244bb6
+               |          0xffffffffaa243bc5
+               |          0xffffffffaa57591c
+               |          0xffffffffaa56d7ba
+               |          0xffffffffaa56d54c
+               |          |          
+               |          |--6.06%--0xffffffffaa56d22a
+               |          |          0xffffffffaa568127
+               |          |          0xffffffffab53c543
+               |          |          
+               |           --3.03%--0xffffffffab54c4d0
+               |          
+                --3.03%--0xffffffffaa244c15
+                          0xffffffffaa2abc67
+                          0xffffffffab54c591
+
+    12.12%     0.00%  sms_app_host  libc.so.6         [.] pthread_create@GLIBC_2.2.5
+            |
+            ---pthread_create@GLIBC_2.2.5
+               internal_signal_restore_set (inlined)
+               create_thread
+               __GI___clone3
+               0xffffffffa9e0012b
+               0xffffffffab531b85
+               0xffffffffaa1498b9
+               0xffffffffaa245386
+               0xffffffffaa245317
+               |          
+               |--9.09%--0xffffffffaa244bb6
+               |          0xffffffffaa243bc5
+               |          0xffffffffaa57591c
+               |          0xffffffffaa56d7ba
+               |          0xffffffffaa56d54c
+               |          |          
+               |          |--6.06%--0xffffffffaa56d22a
+               |          |          0xffffffffaa568127
+               |          |          0xffffffffab53c543
+               |          |          
+               |           --3.03%--0xffffffffab54c4d0
+               |          
+                --3.03%--0xffffffffaa244c15
+                          0xffffffffaa2abc67
+                          0xffffffffab54c591
+
+    12.12%     0.00%  sms_app_host  libc.so.6         [.] internal_signal_restore_set (inlined)
+            |
+            ---internal_signal_restore_set (inlined)
+               create_thread
+               __GI___clone3
+               0xffffffffa9e0012b
+               0xffffffffab531b85
+               0xffffffffaa1498b9
+               0xffffffffaa245386
+               0xffffffffaa245317
+               |          
+               |--9.09%--0xffffffffaa244bb6
+               |          0xffffffffaa243bc5
+               |          0xffffffffaa57591c
+               |          0xffffffffaa56d7ba
+               |          0xffffffffaa56d54c
+               |          |          
+               |          |--6.06%--0xffffffffaa56d22a
+               |          |          0xffffffffaa568127
+               |          |          0xffffffffab53c543
+               |          |          
+               |           --3.03%--0xffffffffab54c4d0
+               |          
+                --3.03%--0xffffffffaa244c15
+                          0xffffffffaa2abc67
+                          0xffffffffab54c591
+
+    12.12%     0.00%  sms_app_host  libc.so.6         [.] create_thread
+            |
+            ---create_thread
+               __GI___clone3
+               0xffffffffa9e0012b
+               0xffffffffab531b85
+               0xffffffffaa1498b9
+               0xffffffffaa245386
+               0xffffffffaa245317
+               |          
+               |--9.09%--0xffffffffaa244bb6
+               |          0xffffffffaa243bc5
+               |          0xffffffffaa57591c
+               |          0xffffffffaa56d7ba
+               |          0xffffffffaa56d54c
+               |          |          
+               |          |--6.06%--0xffffffffaa56d22a
+               |          |          0xffffffffaa568127
+               |          |          0xffffffffab53c543
+               |          |          
+               |           --3.03%--0xffffffffab54c4d0
+               |          
+                --3.03%--0xffffffffaa244c15
+                          0xffffffffaa2abc67
+                          0xffffffffab54c591
+
+    12.12%     0.00%  sms_app_host  libc.so.6         [.] __GI___clone3
+            |
+            ---__GI___clone3
+               0xffffffffa9e0012b
+               0xffffffffab531b85
+               0xffffffffaa1498b9
+               0xffffffffaa245386
+               0xffffffffaa245317
+               |          
+               |--9.09%--0xffffffffaa244bb6
+               |          0xffffffffaa243bc5
+               |          0xffffffffaa57591c
+               |          0xffffffffaa56d7ba
+               |          0xffffffffaa56d54c
+               |          |          
+               |          |--6.06%--0xffffffffaa56d22a
+               |          |          0xffffffffaa568127
+               |          |          0xffffffffab53c543
+               |          |          
+               |           --3.03%--0xffffffffab54c4d0
+               |          
+                --3.03%--0xffffffffaa244c15
+                          0xffffffffaa2abc67
+                          0xffffffffab54c591
+
+    12.12%     0.00%  sms_app_host  [unknown]         [.] 0xffffffffaa1498b9
+            |
+            ---0xffffffffaa1498b9
+               0xffffffffaa245386
+               0xffffffffaa245317
+               |          
+               |--9.09%--0xffffffffaa244bb6
+               |          0xffffffffaa243bc5
+               |          0xffffffffaa57591c
+               |          0xffffffffaa56d7ba
+               |          0xffffffffaa56d54c
+               |          |          
+               |          |--6.06%--0xffffffffaa56d22a
+               |          |          0xffffffffaa568127
+               |          |          0xffffffffab53c543
+               |          |          
+               |           --3.03%--0xffffffffab54c4d0
+               |          
+                --3.03%--0xffffffffaa244c15
+                          0xffffffffaa2abc67
+                          0xffffffffab54c591
+
+    12.12%     0.00%  sms_app_host  [unknown]         [.] 0xffffffffaa245386
+            |
+            ---0xffffffffaa245386
+               0xffffffffaa245317
+               |          
+               |--9.09%--0xffffffffaa244bb6
+               |          0xffffffffaa243bc5
+               |          0xffffffffaa57591c
+               |          0xffffffffaa56d7ba
+               |          0xffffffffaa56d54c
+               |          |          
+               |          |--6.06%--0xffffffffaa56d22a
+               |          |          0xffffffffaa568127
+               |          |          0xffffffffab53c543
+               |          |          
+               |           --3.03%--0xffffffffab54c4d0
+               |          
+                --3.03%--0xffffffffaa244c15
+                          0xffffffffaa2abc67
+                          0xffffffffab54c591
+
+    12.12%     0.00%  sms_app_host  [unknown]         [.] 0xffffffffaa245317
+            |
+            ---0xffffffffaa245317
+               |          
+               |--9.09%--0xffffffffaa244bb6
+               |          0xffffffffaa243bc5
+               |          0xffffffffaa57591c
+               |          0xffffffffaa56d7ba
+               |          0xffffffffaa56d54c
+               |          |          
+               |          |--6.06%--0xffffffffaa56d22a
+               |          |          0xffffffffaa568127
+               |          |          0xffffffffab53c543
+               |          |          
+               |           --3.03%--0xffffffffab54c4d0
+               |          
+                --3.03%--0xffffffffaa244c15
+                          0xffffffffaa2abc67
+                          0xffffffffab54c591
+
+     9.09%     0.00%  sms_app_host  [unknown]         [.] 0xffffffffaa244bb6
+            |
+            ---0xffffffffaa244bb6
+               0xffffffffaa243bc5
+               0xffffffffaa57591c
+               0xffffffffaa56d7ba
+               0xffffffffaa56d54c
+               |          
+               |--6.06%--0xffffffffaa56d22a
+               |          0xffffffffaa568127
+               |          0xffffffffab53c543
+               |          
+                --3.03%--0xffffffffab54c4d0
+
+     9.09%     0.00%  sms_app_host  [unknown]         [.] 0xffffffffaa243bc5
+            |
+            ---0xffffffffaa243bc5
+               0xffffffffaa57591c
+               0xffffffffaa56d7ba
+               0xffffffffaa56d54c
+               |          
+               |--6.06%--0xffffffffaa56d22a
+               |          0xffffffffaa568127
+               |          0xffffffffab53c543
+               |          
+                --3.03%--0xffffffffab54c4d0
+
+     9.09%     0.00%  sms_app_host  [unknown]         [.] 0xffffffffaa57591c
+            |
+            ---0xffffffffaa57591c
+               0xffffffffaa56d7ba
+               0xffffffffaa56d54c
+               |          
+               |--6.06%--0xffffffffaa56d22a
+               |          0xffffffffaa568127
+               |          0xffffffffab53c543
+               |          
+                --3.03%--0xffffffffab54c4d0
+
+     9.09%     0.00%  sms_app_host  [unknown]         [.] 0xffffffffaa56d7ba
+            |
+            ---0xffffffffaa56d7ba
+               0xffffffffaa56d54c
+               |          
+               |--6.06%--0xffffffffaa56d22a
+               |          0xffffffffaa568127
+               |          0xffffffffab53c543
+               |          
+                --3.03%--0xffffffffab54c4d0
+
+     9.09%     0.00%  sms_app_host  [unknown]         [.] 0xffffffffaa56d54c
+            |
+            ---0xffffffffaa56d54c
+               |          
+               |--6.06%--0xffffffffaa56d22a
+               |          0xffffffffaa568127
+               |          0xffffffffab53c543
+               |          
+                --3.03%--0xffffffffab54c4d0
+
+     6.06%     6.06%  sms_app_host  [unknown]         [k] 0xffffffffab53c543
+            |
+            ---0xa
+               main
+               pthread_create@GLIBC_2.2.5
+               internal_signal_restore_set (inlined)
+               create_thread
+               __GI___clone3
+               0xffffffffa9e0012b
+               0xffffffffab531b85
+               0xffffffffaa1498b9
+               0xffffffffaa245386
+               0xffffffffaa245317
+               0xffffffffaa244bb6
+               0xffffffffaa243bc5
+               0xffffffffaa57591c
+               0xffffffffaa56d7ba
+               0xffffffffaa56d54c
+               0xffffffffaa56d22a
+               0xffffffffaa568127
+               0xffffffffab53c543
+
+     6.06%     0.00%  sms_app_host  libc.so.6         [.] mq_timedreceive@@GLIBC_2.34
+            |
+            ---mq_timedreceive@@GLIBC_2.34
+               __syscall_cancel_arch_end
+               0xffffffffa9e0012b
+               |          
+               |--3.03%--0xffffffffab531b85
+               |          0xffffffffaa148ffe
+               |          0xffffffffaa909718
+               |          0xffffffffaa90916f
+               |          
+                --3.03%--0xffffffffab531ad0
+
+     6.06%     0.00%  sms_app_host  [unknown]         [.] 0xffffffffaa56d22a
+            |
+            ---0xffffffffaa56d22a
+               0xffffffffaa568127
+               0xffffffffab53c543
+
+     6.06%     0.00%  sms_app_host  [unknown]         [.] 0xffffffffaa568127
+            |
+            ---0xffffffffaa568127
+               0xffffffffab53c543
+
+     3.03%     3.03%  sms_app_host  [unknown]         [k] 0xffffffffaa377e7e
+            |
+            ---alert_thread
+               usleep
+               __nanosleep
+               clock_nanosleep@GLIBC_2.2.5
+               __syscall_cancel_arch_end
+               0xffffffffa9e0012b
+               0xffffffffab531b85
+               0xffffffffaa149e95
+               0xffffffffaa3884ee
+               0xffffffffaa385c24
+               0xffffffffaa379a62
+               0xffffffffaa377fca
+               0xffffffffaa377e7e
+
+     3.03%     3.03%  sms_app_host  [unknown]         [k] 0xffffffffab541fe5
+            |
+            ---alert_thread
+               usleep
+               __nanosleep
+               clock_nanosleep@GLIBC_2.2.5
+               __syscall_cancel_arch_end
+               0xffffffffa9e0012b
+               0xffffffffab531b85
+               0xffffffffaa149e95
+               0xffffffffaa3884ee
+               0xffffffffaa385c24
+               0xffffffffaa379aab
+               0xffffffffab549cee
+               0xffffffffab541fe5
+
+     3.03%     3.03%  sms_app_host  [unknown]         [k] 0xffffffffaa90916f
+            |
+            ---alert_thread
+               mq_timedreceive@@GLIBC_2.34
+               __syscall_cancel_arch_end
+               0xffffffffa9e0012b
+               0xffffffffab531b85
+               0xffffffffaa148ffe
+               0xffffffffaa909718
+               0xffffffffaa90916f
+
+     3.03%     3.03%  sms_app_host  libc.so.6         [.] __internal_syscall_cancel
+            |
+            ---alert_thread
+               usleep
+               __nanosleep
+               clock_nanosleep@GLIBC_2.2.5
+               __internal_syscall_cancel
+
+     3.03%     3.03%  sms_app_host  [unknown]         [k] 0xffffffffab531ad0
+            |
+            ---alert_thread
+               mq_timedreceive@@GLIBC_2.34
+               __syscall_cancel_arch_end
+               0xffffffffa9e0012b
+               0xffffffffab531ad0
+
+     3.03%     3.03%  sms_app_host  [unknown]         [k] 0xffffffffab54c4d0
+            |
+            ---0xa
+               main
+               pthread_create@GLIBC_2.2.5
+               internal_signal_restore_set (inlined)
+               create_thread
+               __GI___clone3
+               0xffffffffa9e0012b
+               0xffffffffab531b85
+               0xffffffffaa1498b9
+               0xffffffffaa245386
+               0xffffffffaa245317
+               0xffffffffaa244bb6
+               0xffffffffaa243bc5
+               0xffffffffaa57591c
+               0xffffffffaa56d7ba
+               0xffffffffaa56d54c
+               0xffffffffab54c4d0
+
+     3.03%     3.03%  sms_app_host  [unknown]         [k] 0xffffffffab54c591
+            |
+            ---0xa
+               main
+               pthread_create@GLIBC_2.2.5
+               internal_signal_restore_set (inlined)
+               create_thread
+               __GI___clone3
+               0xffffffffa9e0012b
+               0xffffffffab531b85
+               0xffffffffaa1498b9
+               0xffffffffaa245386
+               0xffffffffaa245317
+               0xffffffffaa244c15
+               0xffffffffaa2abc67
+               0xffffffffab54c591
+
+     3.03%     0.00%  sms_app_host  sms_app_host      [.] logger_thread
+            |
+            ---logger_thread
+               usleep
+               __nanosleep
+               clock_nanosleep@GLIBC_2.2.5
+               __syscall_cancel_arch_end
+
+     3.03%     0.00%  sms_app_host  [unknown]         [.] 0xffffffffaa148ffe
+            |
+            ---0xffffffffaa148ffe
+               0xffffffffaa909718
+               0xffffffffaa90916f
+
+     3.03%     0.00%  sms_app_host  [unknown]         [.] 0xffffffffaa244c15
+            |
+            ---0xffffffffaa244c15
+               0xffffffffaa2abc67
+               0xffffffffab54c591
+
+     3.03%     0.00%  sms_app_host  [unknown]         [.] 0xffffffffaa2abc67
+            |
+            ---0xffffffffaa2abc67
+               0xffffffffab54c591
+
+     3.03%     0.00%  sms_app_host  [unknown]         [.] 0xffffffffaa379a62
+            |
+            ---0xffffffffaa379a62
+               0xffffffffaa377fca
+               0xffffffffaa377e7e
+
+     3.03%     0.00%  sms_app_host  [unknown]         [.] 0xffffffffaa377fca
+            |
+            ---0xffffffffaa377fca
+               0xffffffffaa377e7e
+
+     3.03%     0.00%  sms_app_host  [unknown]         [.] 0xffffffffaa909718
+            |
+            ---0xffffffffaa909718
+               0xffffffffaa90916f
+
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#
